@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Микролаб</string>
+    <string name="app_title_header">Микролаб</string>
+    <string name="app_title_author">Бондаренко А. А.</string>
+    <string name="app_title_year">2016 год</string>
+
+    <string name="button_reset">СБРОС</string>
+    <string name="button_input">ВВОД</string>
+    <string name="button_output">ВЫВОД</string>
+    <string name="button_adrp">АД+</string>
+    <string name="button_adrm">АД-</string>
+    <string name="button_setadr">УСТ АД</string>
+    <string name="button_return">ВОЗВР</string>
+    <string name="button_run">ПУСК</string>
+    <string name="button_write">ЗАПИСЬ</string>
+    <string name="button_settings">ОПЦ.</string>
+
+    <string name="dialog_about_title">О программе</string>
+    <string name="dialog_about_text">
+        <![CDATA[
+            <h3>Микролаб</h3>
+            <p>Эмулятор обучающей микропроцессорной лаборатории на базе КР580ВМ(ИК)80.<br/>
+            Для получения подробной информации зайдите в раздел \"Справка\".</p>
+            <b>Автор:</b> Бондаренко Артём, <a href=\"mailto:artembondarenko@i.ua\">artembondarenko@i.ua</a><br/>
+            <b>Версия:</b> 1.0b<br/>
+            <b>Год:</b> 2016 ]]>
+    </string>
+    <string name="dialog_about_button">Закрыть</string>
+
+    <string name="dialog_settings_title">Опции</string>
+    <string name="dialog_settings_item_soft">Память</string>
+    <string name="dialog_settings_item_help">Справка</string>
+    <string name="dialog_settings_item_about">О программе…</string>
+    <string name="dialog_settings_item_quit">Выйти</string>
+    <string name="title_activity_help">HelpActivity</string>
+
+</resources>

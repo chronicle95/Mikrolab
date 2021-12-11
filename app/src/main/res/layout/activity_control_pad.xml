@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#2b7a35">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="@drawable/display_bg"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout"
+            android:layout_toStartOf="@+id/tableLayout"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_weight="1">
+
+            <org.hiranoaiku.mikrolab.view.Digit
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:id="@+id/digit0"
+                android:layout_weight="1" />
+
+            <org.hiranoaiku.mikrolab.view.Digit
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:id="@+id/digit1"
+                android:layout_weight="1" />
+
+            <org.hiranoaiku.mikrolab.view.Digit
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:id="@+id/digit2"
+                android:layout_weight="1" />
+
+            <org.hiranoaiku.mikrolab.view.Digit
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:id="@+id/digit3"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/separator0" />
+
+            <org.hiranoaiku.mikrolab.view.Digit
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:id="@+id/digit4"
+                android:layout_weight="1" />
+
+            <org.hiranoaiku.mikrolab.view.Digit
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:id="@+id/digit5"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/separator1" />
+
+            <org.hiranoaiku.mikrolab.view.Digit
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:id="@+id/digit6"
+                android:layout_weight="1" />
+
+            <org.hiranoaiku.mikrolab.view.Digit
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:id="@+id/digit7"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/app_title_header"
+                android:id="@+id/textTitle"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/textView"
+                android:layout_alignEnd="@+id/textView"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/app_title_author"
+                android:id="@+id/textAuthor"
+                android:layout_below="@+id/textTitle"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/app_title_year"
+                android:id="@+id/textView"
+                android:layout_below="@+id/textAuthor"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:layout_marginTop="5dp"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                style="?android:buttonStyleSmall"
+                android:text="@string/button_reset"
+                android:id="@+id/buttonReset"
+                android:background="@drawable/button_bg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textColor="#000000"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <org.hiranoaiku.mikrolab.view.LedStrip
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/ledStrip"
+                android:layout_above="@+id/linearLayout2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:id="@+id/linearLayout2"
+                android:layout_above="@+id/buttonReset"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp">
+
+                <org.hiranoaiku.mikrolab.view.Switch
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/switchView0"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1" />
+
+                <org.hiranoaiku.mikrolab.view.Switch
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/switchView1"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1" />
+
+                <org.hiranoaiku.mikrolab.view.Switch
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/switchView2"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1" />
+
+                <org.hiranoaiku.mikrolab.view.Switch
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/switchView3"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <Button
+                style="?android:buttonStyleSmall"
+                android:text="@string/button_settings"
+                android:id="@+id/buttonSettings"
+                android:background="@drawable/button_bg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textColor="#000000"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/linearLayout2"
+                android:layout_alignStart="@+id/linearLayout2"
+                android:layout_marginBottom="10dp" />
+        </RelativeLayout>
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="@drawable/keypad_bg"
+            android:id="@+id/tableLayout"
+            android:layout_weight="2"
+            android:stretchColumns="*"
+            android:shrinkColumns="*">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Key"
+                    android:text="@string/button_return"
+                    android:id="@+id/buttonReturn"
+                    android:layout_column="0"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp" />
+
+                <Button
+                    style="@style/Key"
+                    android:text="@string/button_run"
+                    android:id="@+id/buttonRun"
+                    android:layout_column="1"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="C"
+                    android:id="@+id/buttonHC"
+                    android:layout_column="2" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="D"
+                    android:id="@+id/buttonHD"
+                    android:layout_column="3"
+                    android:textStyle="bold" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="E"
+                    android:id="@+id/buttonHE"
+                    android:layout_column="4"/>
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="F"
+                    android:id="@+id/buttonHF"
+                    android:layout_column="5" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Key"
+                    android:text="@string/button_setadr"
+                    android:id="@+id/buttonSet"
+                    android:layout_column="0"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp" />
+
+                <Button
+                    style="@style/Key"
+                    android:text="@string/button_write"
+                    android:id="@+id/buttonWrite"
+                    android:layout_column="1"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="8"
+                    android:id="@+id/buttonH8"
+                    android:layout_column="2"
+                    android:textStyle="bold" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="9"
+                    android:id="@+id/buttonH9"
+                    android:layout_column="3" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="A"
+                    android:id="@+id/buttonHA"
+                    android:layout_column="4" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="B"
+                    android:id="@+id/buttonHB"
+                    android:layout_column="5" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Key"
+                    android:text="@string/button_adrp"
+                    android:id="@+id/buttonInc"
+                    android:layout_column="0"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp" />
+
+                <Button
+                    style="@style/Key"
+                    android:text="@string/button_adrm"
+                    android:id="@+id/buttonDec"
+                    android:layout_column="1"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="4"
+                    android:id="@+id/buttonH4"
+                    android:layout_column="2" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="5"
+                    android:id="@+id/buttonH5"
+                    android:layout_column="3" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="6"
+                    android:id="@+id/buttonH6"
+                    android:layout_column="4" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="7"
+                    android:id="@+id/buttonH7"
+                    android:layout_column="5" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Key"
+                    android:text="@string/button_input"
+                    android:id="@+id/buttonInput"
+                    android:layout_column="0"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp" />
+
+                <Button
+                    style="@style/Key"
+                    android:text="@string/button_output"
+                    android:id="@+id/buttonOutput"
+                    android:layout_column="1"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="0"
+                    android:id="@+id/buttonH0"
+                    android:layout_column="2" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="1"
+                    android:id="@+id/buttonH1"
+                    android:layout_column="3" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="2"
+                    android:id="@+id/buttonH2"
+                    android:layout_column="4" />
+
+                <Button
+                    style="@style/HexKey"
+                    android:text="3"
+                    android:id="@+id/buttonH3"
+                    android:layout_column="5" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
